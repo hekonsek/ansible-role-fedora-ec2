@@ -1,7 +1,7 @@
 Ansible Role - Fedora EC2 instance
 =========
 
-This playbook can be used to provision Fedora 25 on AWS EC2. It ensures that:
+Provisions Fedora 25 on AWS EC2. It ensures that:
 - Fedora 25 AWS EC2 node is provisioned and started
 - public SSH key is uploaded and assigned to provisioned EC2 node
 - EC2 security group firewall has been configured to accept only SSH traffic
