@@ -5,9 +5,9 @@
     region: eu-central-1
     state: present
 
-- name: Create default security group on AWS
+- name: Create default EC2 security group
   ec2_group:
-    name: streamShift
+    name: defaultGroup
     description: Default streamShift security group
     region: eu-central-1
     rules:
@@ -26,7 +26,7 @@
     instance_type: "{{ instance_type | default('t2.medium') }}"
     region: eu-central-1
     image: ami-bac603d5 # Fedora 25
-    group: streamShift
+    group: defaultGroup
     wait: yes
     instance_tags:
       name: "{{ instance_name | default('streamShift') }}"
