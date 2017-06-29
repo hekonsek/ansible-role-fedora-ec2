@@ -35,9 +35,13 @@ Role Variables
 Example Playbook
 ----------------
 
-    - hosts: servers
-      roles:
-        - { role: hekonsek.fedora-ec2,0.2 }
+```
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    - { role: hekonsek.fedora-ec2,0.2 }
+```
 
 License
 -------
