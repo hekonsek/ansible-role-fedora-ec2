@@ -8,6 +8,10 @@ Provisions Fedora 25 on AWS EC2. It ensures that:
 
 Default instance size is T2 medium (i.e. 4 GB of RAM) - in order to change it, override `instance_type` Ansible variable (for example `instance_type=t2.large`).
 
+## Compatibility
+
+This playbook has been tested against Fedora 25.
+
 Requirements
 ------------
 
@@ -18,6 +22,10 @@ Keep in mind that Ansible EC2 module requires you to have Boto installed:
 You can specify AWS credentials either in Boto file (for example `~/.boto`) or using environment variables:
     
     AWS_ACCESS_KEY_ID='yourKeyId' AWS_SECRET_ACCESS_KEY='yourSecretKey' ansible-playbook aws.yml
+
+## Installation 
+
+    ansible-galaxy install hekonsek.fedora-ec2,0.2
 
 Role Variables
 --------------
