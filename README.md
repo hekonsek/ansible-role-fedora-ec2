@@ -12,8 +12,7 @@ Default instance size is T2 medium (i.e. 4 GB of RAM) - in order to change it, o
 
 This playbook has been tested against Fedora 25.
 
-Requirements
-------------
+## Requirements
 
 Keep in mind that Ansible EC2 module requires you to have Boto installed: 
 
@@ -27,13 +26,11 @@ You can specify AWS credentials either in Boto file (for example `~/.boto`) or u
 
     ansible-galaxy install hekonsek.fedora-ec2,0.2
 
-Role Variables
---------------
+## Role variables
 
 - `keyName` - name that should be assigned to the uploaded SSH public key 
 
-Example Playbook
-----------------
+## Example playbook
 
 ```
 - hosts: localhost
@@ -43,7 +40,6 @@ Example Playbook
     - { role: hekonsek.fedora-ec2,0.2 }
 ```
 
-License
--------
+## License
 
 Apache 2.0
