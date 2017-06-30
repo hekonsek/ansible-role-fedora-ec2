@@ -29,7 +29,7 @@ You can specify AWS credentials either in Boto file (for example `~/.boto`) or u
 ## Role variables
 
 - `keyName` - name that should be assigned to the uploaded SSH public key. Default value is `defaultKey`.
-- `group` - name of the security group to create and use. Default value is `defaultGroup`.
+- `group` - name of the security group to create and use. Default value is `default`.
 
 ## Example playbook
 
