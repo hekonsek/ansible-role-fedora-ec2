@@ -7,8 +7,8 @@
 
 - name: Create default EC2 security group
   ec2_group:
-    name: defaultGroup
-    description: Default streamShift security group
+    name: "{{ group }}"
+    description: Default security group
     region: eu-central-1
     rules:
       - proto: tcp
@@ -26,7 +26,7 @@
     instance_type: "{{ instance_type | default('t2.medium') }}"
     region: eu-central-1
     image: ami-bac603d5 # Fedora 25
-    group: defaultGroup
+    group:  "{{ group }}"
     wait: yes
     instance_tags:
       name: "{{ instance_name | default('streamShift') }}"

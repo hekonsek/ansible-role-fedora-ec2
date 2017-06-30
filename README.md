@@ -24,11 +24,12 @@ You can specify AWS credentials either in Boto file (for example `~/.boto`) or u
 
 ## Installation 
 
-    ansible-galaxy install hekonsek.fedora-ec2,0.2
+    ansible-galaxy install hekonsek.fedora-ec2,0.3
 
 ## Role variables
 
-- `keyName` - name that should be assigned to the uploaded SSH public key 
+- `keyName` - name that should be assigned to the uploaded SSH public key. Default value is `defaultKey`.
+- `group` - name of the security group to create and use. Default value is `default`.
 
 ## Example playbook
 
@@ -37,7 +38,7 @@ You can specify AWS credentials either in Boto file (for example `~/.boto`) or u
   connection: local
   gather_facts: false
   roles:
-    - { role: hekonsek.fedora-ec2,0.2 }
+    - { role: hekonsek.fedora-ec2,0.3 }
 ```
 
 ## License
