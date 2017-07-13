@@ -1,2 +1,4 @@
 key_name: defaultKey
 group: default
+instance_name: defaultServer
+instance_type: t2.medium

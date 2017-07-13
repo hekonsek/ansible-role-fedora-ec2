@@ -5,6 +5,7 @@ Provisions Fedora 25 on AWS EC2. It ensures that:
 - Fedora 25 AWS EC2 node is provisioned and started
 - public SSH key is uploaded and assigned to provisioned EC2 node
 - EC2 security group firewall has been configured to accept only SSH traffic
+- OpenSSH server is up and running
 
 Default instance size is T2 medium (i.e. 4 GB of RAM) - in order to change it, override `instance_type` Ansible variable (for example `instance_type=t2.large`).
 
@@ -24,12 +25,14 @@ You can specify AWS credentials either in Boto file (for example `~/.boto`) or u
 
 ## Installation 
 
-    ansible-galaxy install hekonsek.fedora-ec2,0.3
+    ansible-galaxy install hekonsek.fedora-ec2,0.4
 
 ## Role variables
 
 - `keyName` - name that should be assigned to the uploaded SSH public key. Default value is `defaultKey`.
 - `group` - name of the security group to create and use. Default value is `default`.
+- `instance_name` - name tag for created instance. Default value is `defaultServer`.
+- `instance_type` - instance type. Default value is `t2.medium`.
 
 ## Example playbook
 
@@ -38,7 +41,7 @@ You can specify AWS credentials either in Boto file (for example `~/.boto`) or u
   connection: local
   gather_facts: false
   roles:
-    - { role: hekonsek.fedora-ec2,0.3 }
+    - { role: hekonsek.fedora-ec2,0.4 }
 ```
 
 ## License
