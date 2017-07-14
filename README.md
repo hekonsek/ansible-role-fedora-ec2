@@ -6,6 +6,7 @@ Provisions Fedora 25 on AWS EC2. It ensures that:
 - public SSH key is uploaded and assigned to provisioned EC2 node
 - EC2 security group firewall has been configured to accept only SSH traffic
 - OpenSSH server is up and running
+- Ansible-friendly version of Python is installed on provisioned instance
 
 Default instance size is T2 medium (i.e. 4 GB of RAM) - in order to change it, override `instance_type` Ansible variable (for example `instance_type=t2.large`).
 
