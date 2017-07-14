@@ -1,5 +1,4 @@
-Ansible Role - Fedora EC2 instance
-=========
+# Ansible Role - Fedora EC2 instance
 
 Provisions Fedora 25 on AWS EC2. It ensures that:
 - Fedora 25 AWS EC2 node is provisioned and started
