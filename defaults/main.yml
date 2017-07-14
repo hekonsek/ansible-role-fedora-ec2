@@ -1,3 +1,4 @@
+instance_region: eu-central-1
 key_name: defaultKey
 group: default
 instance_name: defaultServer

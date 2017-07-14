@@ -30,6 +30,7 @@ You can specify AWS credentials either in Boto file (for example `~/.boto`) or u
 
 ## Role variables
 
+- `instance_region` - AWS region to use. Default region is `eu-central-1`.
 - `keyName` - name that should be assigned to the uploaded SSH public key. Default value is `defaultKey`.
 - `group` - name of the security group to create and use. Default value is `default`.
 - `instance_name` - name tag for created instance. Default value is `defaultServer`.

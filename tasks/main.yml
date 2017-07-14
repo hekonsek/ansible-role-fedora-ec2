@@ -1,6 +1,6 @@
 - name: Read EC2 instance information
   ec2_remote_facts:
-    region: eu-central-1
+    region: "{{ instance_region }}"
     filters:
       instance-state-name: running
       "tag:Name": "{{ instance_name }}"
@@ -14,14 +14,14 @@
   ec2_key:
     name: "{{ key_name }}"
     key_material: "{{lookup('file', lookup('env','HOME') + '/.ssh/id_rsa.pub')}}"
-    region: eu-central-1
+    region: "{{ instance_region }}"
     state: present
 
 - name: Create default EC2 security group
   ec2_group:
     name: "{{ group }}"
     description: Default security group
-    region: eu-central-1
+    region: "{{ instance_region }}"
     rules:
       - proto: tcp
         from_port: 22
@@ -36,7 +36,7 @@
 - name: Provision Fedora 25
   ec2:
     instance_type: "{{ instance_type }}"
-    region: eu-central-1
+    region: "{{ instance_region }}"
     image: ami-bac603d5 # Fedora 25
     group:  "{{ group }}"
     wait: yes
@@ -46,7 +46,7 @@
 
 - name: Read EC2 instance information
   ec2_remote_facts:
-    region: eu-central-1
+    region: "{{ instance_region }}"
     filters:
       instance-state-name: running
       "tag:Name": "{{ instance_name }}"
