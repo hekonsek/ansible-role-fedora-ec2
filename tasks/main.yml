@@ -57,3 +57,7 @@
 
 - name: Wait for OpenSSH server to start
   wait_for: port=22 host="{{ ec2_info.instances[0].public_dns_name }}" search_regex=OpenSSH delay=10
+
+- name: Install Python
+  delegate_to: "fedora@{{ ec2_info.instances[0].public_dns_name }}"
+  raw: sudo yum install -y python
