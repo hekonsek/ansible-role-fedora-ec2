@@ -43,6 +43,11 @@
     instance_tags:
       Name: "{{ instance_name }}"
     key_name: "{{ key_name }}"
+    volumes:
+      - device_name: /dev/xvda
+        volume_type: gp2
+        volume_size: "{{ volume_size }}"
+        delete_on_termination: true
 
 - name: Read EC2 instance information
   ec2_remote_facts:
