@@ -32,6 +32,7 @@ You can specify AWS credentials either in Boto file (for example `~/.boto`) or u
 - `group` - name of the security group to create and use. Default value is `default`.
 - `instance_name` - name tag for created instance. Default value is `defaultServer`.
 - `instance_type` - instance type. Default value is `t2.medium`.
+- `volume_size` - volume size in GB. Default value is `8`.
 
 ## Example playbook
 
