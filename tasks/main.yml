@@ -33,11 +33,20 @@
             to_port: 65535
             cidr_ip: 0.0.0.0/0
 
-- name: Provision Fedora 25
+- name: Resolve Fedora 26 ami
+  resolve_fedora_ami:
+    region: "{{ instance_region }}"
+    ssd: "{{ instance_ssd }}"
+  register: fedora_ami
+
+- fail: msg="Could not resolve requested ami"
+  when: not fedora_ami.name
+
+- name: Provision Fedora 26
   ec2:
     instance_type: "{{ instance_type }}"
     region: "{{ instance_region }}"
-    image: ami-bac603d5 # Fedora 25
+    image: "{{ fedora_ami.name }}"
     group:  "{{ group }}"
     wait: yes
     instance_tags:
