@@ -39,10 +39,12 @@
     ssd: "{{ instance_ssd }}"
   register: fedora_ami
 
-- fail: msg="Could not resolve requested ami"
+- name: Check if request AMI can be resolved
+  fail: msg="Could not resolve requested AMI"
   when: not fedora_ami.name
 
-- name: Provision Fedora 26  ec2:
+- name: Provision Fedora 26
+  ec2:
     instance_type: "{{ instance_type }}"
     region: "{{ instance_region }}"
     image: "{{ fedora_ami.name }}"
