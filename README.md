@@ -33,6 +33,7 @@ You can specify AWS credentials either in Boto file (for example `~/.boto`) or u
 - `instance_name` - name tag for created instance. Default value is `defaultServer`.
 - `instance_type` - instance type. Default value is `t2.medium`.
 - `volume_size` - volume size in GB. Default value is `8`.
+- `volume_device_name` - name of the volume device. Default value is `/dev/sda1`.
 
 ## Example playbook
 

@@ -33,7 +33,7 @@
             to_port: 65535
             cidr_ip: 0.0.0.0/0
 
-- name: Provision Fedora 25
+- name: Provision Fedora 26
   ec2:
     instance_type: "{{ instance_type }}"
     region: "{{ instance_region }}"
@@ -44,7 +44,7 @@
       Name: "{{ instance_name }}"
     key_name: "{{ key_name }}"
     volumes:
-      - device_name: /dev/xvda
+      - device_name: "{{ volume_device_name }}"
         volume_type: gp2
         volume_size: "{{ volume_size }}"
         delete_on_termination: true

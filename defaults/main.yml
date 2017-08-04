@@ -4,3 +4,4 @@ group: default
 instance_name: defaultServer
 instance_type: t2.medium
 volume_size: 8
+volume_device_name: /dev/sda1
