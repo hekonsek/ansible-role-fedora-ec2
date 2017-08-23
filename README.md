@@ -30,7 +30,7 @@ You can specify AWS credentials either in Boto file (for example `~/.boto`) or u
 - `instance_region` - AWS region to use. Default region is `eu-central-1`.
 - `instance_name` - name tag for created instance. Default value is `defaultServer`.
 - `instance_type` - instance type. Default value is `t2.medium`.
-- `instance_ssd` - use ssd?. Default value is `true`.
+- `instance_ssd` - indicates if SSD disk should be used. Default value is `true`.
 - `keyName` - name that should be assigned to the uploaded SSH public key. Default value is `defaultKey`.
 - `group` - name of the security group to create and use. Default value is `default`.
 - `volume_size` - volume size in GB. Default value is `8`.
