@@ -23,7 +23,7 @@ You can specify AWS credentials either in Boto file (for example `~/.boto`) or u
 
 ## Installation 
 
-    ansible-galaxy install hekonsek.fedora-ec2,0.8
+    ansible-galaxy install hekonsek.fedora-ec2,0.9
 
 ## Role variables
 
@@ -43,7 +43,7 @@ You can specify AWS credentials either in Boto file (for example `~/.boto`) or u
   connection: local
   gather_facts: false
   roles:
-    - { role: hekonsek.fedora-ec2,0.8 }
+    - { role: hekonsek.fedora-ec2,0.9 }
 ```
 
 ## License
