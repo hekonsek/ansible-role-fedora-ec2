@@ -27,7 +27,7 @@ You can specify AWS credentials either in Boto file (for example `~/.boto`) or u
 
 ## Role variables
 
-- `instance_region` - AWS region to use. Default region is `eu-central-1`.
+- `instance_region` - AWS region to use. Default region is `us-east-1` i.e. the cheapest one.
 - `instance_name` - name tag for created instance. Default value is `defaultServer`.
 - `instance_type` - instance type. Default value is `t2.medium`.
 - `instance_ssd` - indicates if SSD disk should be used. Default value is `true`.
