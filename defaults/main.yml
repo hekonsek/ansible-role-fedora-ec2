@@ -1,4 +1,4 @@
-instance_region: eu-central-1
+instance_region: us-east-1
 instance_name: defaultServer
 instance_type: t2.medium
 instance_ssd: true
