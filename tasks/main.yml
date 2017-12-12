@@ -17,10 +17,10 @@
     region: "{{ instance_region }}"
     state: present
 
-- name: Create default EC2 security group
+- name: 'Create {{ group }} EC2 security group'
   ec2_group:
     name: "{{ group }}"
-    description: Default security group
+    description: '{{ group }} security group'
     region: "{{ instance_region }}"
     rules:
       - proto: tcp
