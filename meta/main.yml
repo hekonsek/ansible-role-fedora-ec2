@@ -1,6 +1,6 @@
 galaxy_info:
   author: Henryk Konsek
-  description: Provisions Fedora 26 on AWS EC2.
+  description: Provisions Fedora 0.11 on AWS EC2.
   company: Red Hat
 
   license: Apache 2.0
@@ -10,6 +10,6 @@ galaxy_info:
   platforms:
   - name: Fedora
     versions:
-    - 26
+    - 27
 
   galaxy_tags: ["fedora", "AWS", "EC2"]

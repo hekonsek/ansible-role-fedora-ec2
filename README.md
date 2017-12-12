@@ -1,7 +1,7 @@
 # Ansible Role - Fedora EC2 instance
 
-Provisions Fedora 26 on AWS EC2. It ensures that:
-- Fedora 26 AWS EC2 node is provisioned and started
+Provisions Fedora 27 on AWS EC2. It ensures that:
+- Fedora 27 AWS EC2 node is provisioned and started
 - public SSH key is uploaded and assigned to provisioned EC2 node
 - EC2 security group firewall has been configured to accept only SSH traffic
 - OpenSSH server is up and running
@@ -9,7 +9,7 @@ Provisions Fedora 26 on AWS EC2. It ensures that:
 
 ## Compatibility
 
-This playbook has been tested against Fedora 26.
+This playbook has been tested against Fedora 27.
 
 ## Requirements
 
@@ -23,7 +23,7 @@ You can specify AWS credentials either in Boto file (for example `~/.boto`) or u
 
 ## Installation 
 
-    ansible-galaxy install hekonsek.fedora-ec2,0.10
+    ansible-galaxy install hekonsek.fedora-ec2,0.11
 
 ## Role variables
 
@@ -43,7 +43,7 @@ You can specify AWS credentials either in Boto file (for example `~/.boto`) or u
   connection: local
   gather_facts: false
   roles:
-    - { role: hekonsek.fedora-ec2,0.10 }
+    - { role: hekonsek.fedora-ec2,0.11 }
 ```
 
 ## License
